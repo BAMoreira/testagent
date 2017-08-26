@@ -15,6 +15,7 @@ fi
 
 for AGENT in $ADIR
 do
-swipl -s $AGENT -t start > $TMPFILE 2>/dev/null
+    swipl -qs $AGENT -t start > $TMPFILE
+    
     less < $TMPFILE
 done
